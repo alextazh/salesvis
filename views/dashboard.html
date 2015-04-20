@@ -1,0 +1,59 @@
+<div class="row">
+	<div class="col-sm-12">
+		<ul class="list-unstyled">
+
+			<li class="panel chartpanel panel-info">
+				<div class="panel-heading">Sales Total per Sales Man<span class="glyphicon glyphicon-remove pull-right cursor-pointer"></span><span class="glyphicon glyphicon-refresh pull-right cursor-pointer"></span></div>
+				<div class="panel-body" id="SalesTotalPerSalesMan"></div>
+			</li>
+
+			<li class="panel chartpanel panel-info">
+				<div class="panel-heading">Sales Total per month<span class="glyphicon glyphicon-remove pull-right cursor-pointer"></span><span class="glyphicon glyphicon-refresh pull-right cursor-pointer"></span></div>
+				<div class="panel-body" id="SalesTotalPerMonth"></div>
+			</li>
+
+			<li class="panel chartpanel panel-info">
+				<div class="panel-heading">Top 5 Sales Orders in amount<span class="glyphicon glyphicon-remove pull-right cursor-pointer"></span><span class="glyphicon glyphicon-refresh pull-right cursor-pointer"></span></div>
+				<div class="panel-body">
+					<ul class="list-group toporders"> <!--data goes in here -->
+					  
+					</ul>
+				</div>
+			</li>
+
+			<li class="panel chartpanel panel-info">
+				<div class="panel-heading">Top 5 Sales Men in last 3 months<span class="glyphicon glyphicon-remove pull-right cursor-pointer"></span><span class="glyphicon glyphicon-refresh pull-right cursor-pointer"></span></div>
+				<div class="panel-body">
+					<ul class="list-group topmen"> <!--data goes in here -->
+
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+<div>
+
+<script>
+
+// Draggable & resizable panels
+$(document).ready(function($) {
+
+    var chartpanel = $('.chartpanel');
+    chartpanel.draggable({
+        handle: '.panel-heading', 
+    });
+    chartpanel.resizable({
+    	helper: "resizable-helper",
+    });
+
+    SalesTotalPerSalesManFn();
+    SalesTotalPerMonthFn();
+    Top5SalesOrdersFn();
+    Top5SalesMenFn();
+
+    $('#dashboard_navItem').removeClass('hidden');
+  	$('#logout_navItem').removeClass('hidden');
+});
+
+
+</script>

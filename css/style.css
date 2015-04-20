@@ -1,0 +1,17 @@
+body {padding-top:80px; height:100%; overflow-x:hidden; padding-bottom:20px;}
+.navbar {position:absolute; padding:5px;}
+.navbar-brand {padding:5px !important; opacity:0.85;}
+.navbar-brand:hover, .navbar-brand:active {opacity:1;}
+.navbar-brand img {height:40px;}
+.center-block {float:none;}
+a {outline:none !important;}
+.panel {width:48%;float:left;margin:10px;}
+@media(max-width:981px) {
+	.panel {width:47%;float:left;margin:6px;}
+}
+@media(max-width:769px) {
+	.panel {width:100%;float:none;margin:20px auto;}
+}
+.cursor-pointer {cursor:pointer;}
+.list-group{margin-bottom:0px;}
+.glyphicon-refresh {margin-right:15px;}
